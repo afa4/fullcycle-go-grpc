@@ -21,7 +21,7 @@ func (*GreeterService) SayHello(ctx context.Context, helloRequest *pb.HelloReque
 func (*GreeterService) Speech(helloRequest *pb.HelloRequest, serv pb.Greeter_SpeechServer) error {
 	for {
 		time.Sleep(time.Second * 1)
-		err := serv.Send(&pb.HelloReply{Message: "Hi"})
+		err := serv.Send(&pb.HelloReply{Message: "Talking..."})
 		if err != nil {
 			break
 		}
